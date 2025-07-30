@@ -60,10 +60,9 @@ arduino
 Copy
 Edit
 http://localhost:8080
+
 📁 Project Structure
-bash
-Copy
-Edit
+
 rust-guessing-game-wasm/
 │
 ├── guessing_game_wasm/       # Rust game logic compiled to WASM
@@ -76,6 +75,7 @@ rust-guessing-game-wasm/
 │   ├── index.js
 │
 ├── README.md
+
 ✨ Features
 Responsive UI with dark mode
 
@@ -88,10 +88,8 @@ Fast and efficient thanks to WebAssembly
 📦 Build Output
 After building with wasm-pack, the output is in:
 
-bash
-Copy
-Edit
 guessing_game_wasm/pkg/
+
 It contains:
 
 .wasm file
@@ -106,6 +104,7 @@ Made with 🧡 using Rust and WebAssembly
 vbnet
 Copy
 Edit
+
 
 📝 Tip: Save this file as README.md in the root of your GitHub repo.
 
