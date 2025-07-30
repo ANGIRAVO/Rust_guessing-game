@@ -2,6 +2,33 @@
 
 This is a simple and interactive number guessing game built with Rust and compiled to WebAssembly (WASM). The frontend is written in HTML, CSS, and JavaScript. Users try to guess a number between 1 and 100, and receive feedback after each guess.
 
+## Visual Overview
+
+```mermaid
+flowchart TD
+    A0["WASM Interoperability
+"]
+    A1["Game State Management
+"]
+    A2["Random Number Generation
+"]
+    A3["Guess Evaluation Logic
+"]
+    A4["User Interface Interaction
+"]
+    A5["Game Reset Mechanism
+"]
+    A2 -- "Generates secret for" --> A1
+    A3 -- "Reads secret from" --> A1
+    A5 -- "Updates secret in" --> A1
+    A5 -- "Requests new number from" --> A2
+    A0 -- "Exposes logic" --> A3
+    A0 -- "Exposes mechanism" --> A5
+    A4 -- "Invokes Rust via" --> A0
+    A0 -- "Sends result to" --> A4
+```
+
+
 ## 🧠 How It Works
 
 - The core game logic is implemented in Rust.
