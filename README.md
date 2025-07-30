@@ -101,6 +101,7 @@ rust-guessing-game-wasm/
 ```
 
 ✨ Features
+
 🎨 Responsive UI with dark mode
 
 ⚡ Instant feedback for user guesses
