@@ -61,8 +61,10 @@ Ensure you have the following installed:
   cargo install wasm-pack
   
 Clone the Repository
+```
 git clone https://github.com/your-username/rust-guessing-game-wasm.git
 cd rust-guessing-game-wasm
+```
 
 Build the WASM Package
  ```bash
