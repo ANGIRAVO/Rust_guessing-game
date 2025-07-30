@@ -38,9 +38,11 @@ git clone https://github.com/your-username/rust-guessing-game-wasm.git
 cd rust-guessing-game-wasm
 
 Build the WASM package
+bash
+Copy
+Edit
 cd guessing_game_wasm
 wasm-pack build --target web
-
 Run the Web App
 Use any static server (e.g. http-server or Python):
 
@@ -58,7 +60,6 @@ arduino
 Copy
 Edit
 http://localhost:8080
-
 📁 Project Structure
 bash
 Copy
@@ -75,7 +76,6 @@ rust-guessing-game-wasm/
 │   ├── index.js
 │
 ├── README.md
-
 ✨ Features
 Responsive UI with dark mode
 
@@ -110,3 +110,12 @@ Edit
 📝 Tip: Save this file as README.md in the root of your GitHub repo.
 
 Let me know if you want me to generate a LICENSE file or a GitHub Actions CI workflow as well!
+
+
+
+
+
+
+
+
+
