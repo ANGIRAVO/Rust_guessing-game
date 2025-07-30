@@ -37,6 +37,61 @@ Clone the Repository
 git clone https://github.com/your-username/rust-guessing-game-wasm.git
 cd rust-guessing-game-wasm
 
+Build the WASM Package
+ ```bash
+cd guessing_game_wasm
+wasm-pack build --target web
+```
+
+Run the Web App
+Use any static file server (e.g., http-server or Python's http module). Here's an example using npm's http-server:
+
+```
+npm install -g http-server
+cd www
+http-server -c-1
+```
+Then open your browser at:
+```
+http://localhost:8080
+```
+📁 Project Structure
+```
+rust-guessing-game-wasm/
+│
+├── guessing_game_wasm/       # Rust game logic compiled to WASM
+│   ├── src/
+│   └── Cargo.toml
+│
+├── www/                      # Frontend code
+│   ├── index.html
+│   ├── style.css
+│   └── index.js
+│
+├── README.md
+```
+
+✨ Features
+🎨 Responsive UI with dark mode
+
+⚡ Instant feedback for user guesses
+
+🔁 Reset button to restart the game
+
+🚀 Fast and efficient thanks to WebAssembly
+
+📦 Build Output
+After building with wasm-pack, the output is placed in:
+```
+guessing_game_wasm/pkg/
+```
+📃 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+
+
+
 
 
 
