@@ -33,7 +33,7 @@ Ensure you have the following installed:
 
 ### Clone the Repository
 
-```bash
+bash
 git clone https://github.com/your-username/rust-guessing-game-wasm.git
 cd rust-guessing-game-wasm
 
@@ -58,6 +58,7 @@ arduino
 Copy
 Edit
 http://localhost:8080
+
 📁 Project Structure
 bash
 Copy
@@ -74,6 +75,7 @@ rust-guessing-game-wasm/
 │   ├── index.js
 │
 ├── README.md
+
 ✨ Features
 Responsive UI with dark mode
 
