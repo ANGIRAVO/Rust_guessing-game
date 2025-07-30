@@ -1,2 +1,2 @@
-# Rust_guesiing game
+# Rust_guessing game
 
