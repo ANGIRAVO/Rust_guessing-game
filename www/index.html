@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rust Guessing Game</title>
-  
+
   <!-- Aurora background style -->
   <link rel="stylesheet" href="aurora.css" />
   <!-- Your custom styles -->
@@ -21,7 +21,7 @@
     <p>I'm thinking of a number between <strong>1 and 100</strong>. Can you guess it?</p>
 
     <input type="number" id="guess-input" placeholder="Enter your guess..." min="1" max="100" />
-    
+
     <div class="button-group">
       <button id="guess-btn">🎯 Guess</button>
       <button id="reset-btn">🔁 Reset</button>
@@ -30,9 +30,39 @@
     <div id="result-message" class="result-message">Let's begin!</div>
   </div>
 
-  <!-- Game logic -->
-  <script type="module" src="index.js"></script>
-  <!-- Aurora animation logic -->
-  <script type="module" src="aurora.js"></script>
+  <!-- Load Aurora animation logic -->
+  <script type="module" src="./aurora.js"></script>
+
+  <!-- Import WASM and Game logic -->
+  <script type="module">
+    import init, { check_guess, reset_game } from "./pkg/guessing_game_wasm.js";
+
+    const guessInput = document.getElementById("guess-input");
+    const guessBtn = document.getElementById("guess-btn");
+    const resetBtn = document.getElementById("reset-btn");
+    const resultDiv = document.getElementById("result-message");
+
+    async function run() {
+      await init();
+
+      guessBtn.addEventListener("click", () => {
+        const guess = parseInt(guessInput.value);
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          resultDiv.textContent = "Please enter a number between 1 and 100.";
+          return;
+        }
+        const result = check_guess(guess);
+        resultDiv.textContent = result;
+      });
+
+      resetBtn.addEventListener("click", () => {
+        reset_game();
+        resultDiv.textContent = "Game reset! Let's play again.";
+        guessInput.value = "";
+      });
+    }
+
+    run();
+  </script>
 </body>
 </html>
